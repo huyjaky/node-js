@@ -1,9 +1,9 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const morgan = require('morgan');
-const morgan = require('morgan');
 const { engine } = require('express-handlebars');
 const path = require('path');
+const route = require('./routes/routes');
 
 const app = express()
 const port = 3000
@@ -25,4 +25,6 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 // 
+route(app);
 
+app.listen(port, () => console.log(`connect to ${port} done`));
