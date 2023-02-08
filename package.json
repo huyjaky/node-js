@@ -2,24 +2,27 @@
   "name": "kynangmem",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "bea": "prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,hbs,sass}\"",
+    "watch": "node-sass --watch src/resources/scss -o src/public/css",
+    "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VietHoang0805/Frontend.git"
+    "url": "git+https://github.com/huyjaky/node-js.git"
   },
   "keywords": [
-    "hoang.",
+    "hoang",
     "huy"
   ],
   "author": "jajajajau-huy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VietHoang0805/Frontend/issues"
+    "url": "https://github.com/huyjaky/node-js/issues"
   },
-  "homepage": "https://github.com/VietHoang0805/Frontend#readme",
+  "homepage": "https://github.com/huyjaky/node-js#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
