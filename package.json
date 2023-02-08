@@ -1,0 +1,36 @@
+{
+  "name": "kynangmem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VietHoang0805/Frontend.git"
+  },
+  "keywords": [
+    "hoang.",
+    "huy"
+  ],
+  "author": "jajajajau-huy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VietHoang0805/Frontend/issues"
+  },
+  "homepage": "https://github.com/VietHoang0805/Frontend#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "mongoose": "^6.9.1",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  }
+}
