@@ -1,8 +1,7 @@
-const check = require('./check');
+const homepage = require('./homepage');
 
-
-function route (app) {
-    app.use('/check', check);
+function route(app) {
+    app.use('/homepage', homepage);
 }
 
 module.exports = route;
