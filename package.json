@@ -27,8 +27,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
     "mongoose": "^6.9.1",
-    "mongoose-slug-generator": "^1.0.4",
-    "owl.carousel": "^2.3.4"
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
