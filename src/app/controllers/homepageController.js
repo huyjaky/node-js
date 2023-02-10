@@ -1,7 +1,15 @@
+const product = require('../models/productdetail');
 class homepageController {
     homepage(req, res, next) {
         // res.send('check')
-        res.render('homepage');
+        product
+            .find({})
+            .limit(4)
+            .then((product) => {
+                product = product.map((products) => products.toObject());
+                res.render('homepage', { product });
+            })
+            .catch(next);
     }
 }
 

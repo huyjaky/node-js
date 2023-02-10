@@ -1,30 +1,62 @@
-<!-- Slider main container -->
-<div class='swiper'>
-    <!-- Additional required wrapper -->
-    <div class='swiper-wrapper'>
-        <!-- Slides -->
-        <div class='swiper-slide'>Slide 1</div>
-        <div class='swiper-slide'>Slide 2</div>
-        <div class='swiper-slide'>Slide 3</div>
-        ...
+<section class='py-5 bg-success-subtle'>
+    <div class='container1'>
+        <h2 class='fw-bolder mb-4' style='padding-left: 12rem;'>Related products</h2>
+        <div class='swiper'>
+
+            <div class='swiper-wrapper'>
+                {{#each product}}
+                    {{! slide1 }}
+                    <div class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center h-100 swiper-slide mx-auto' >
+                        <div class='col mb-5'>
+                            <div class='card h-100'>
+                                <!-- Product image-->
+                                <img class='card-img-top' src='{{this.img}}' alt='...'/>
+                                <!-- Product details-->
+                                <div class='card-body p-4'>
+                                    <div class='text-center '>
+                                        <!-- Product name-->
+                                        <h5 class='fw-bolder'>{{this.name}}</h5>
+                                        <!-- Product price-->
+                                        $40.00 - $80.00
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' >
+                                    <div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#' >View options</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+                {{! ket thuc slide1 }}
+            </div>
+
+            <div class='swiper-scrollbar'></div>
+
+        </div>
     </div>
-    <!-- If we need pagination -->
-    <div class='swiper-pagination'></div>
-
-    <!-- If we need navigation buttons -->
-    <div class='swiper-button-prev'></div>
-    <div class='swiper-button-next'></div>
-
-    <!-- If we need scrollbar -->
-    <div class='swiper-scrollbar'></div>
-</div>
-
+</section>
 <script type='module'>
-    import Swiper from
-    'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-    const swiper = new Swiper( '.swiper', { // Optional parameters direction:
-    'horizontal', loop: true, // If we need pagination pagination: { el:
-    '.swiper-pagination', }, // Navigation arrows navigation: { nextEl:
-    '.swiper-button-next', prevEl: '.swiper-button-prev', }, // And if we need
-    scrollbar scrollbar: { el: '.swiper-scrollbar', }, });
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+    const swiper = new Swiper('.swiper', { // Optional parameters direction:    
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+    });
 </script>

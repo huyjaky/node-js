@@ -1,0 +1,13 @@
+body {
+  user-select: none; }
+
+.header_container {
+  background-image: url("https://massdrop-s3.imgix.net/ma02-lohp/header-full2.jpg?auto=format&fm=jpg&fit=crop&w=1440&h=774&crop=focalpoint&fp-x=0.37&fp-y=0.48&fp-z=1.3&dpr=2&chromasub=444&q=35&blend-color=black&blend-alpha=30");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+nav {
+  z-index: 1; }
+
+.contain {
+  z-index: 0; }

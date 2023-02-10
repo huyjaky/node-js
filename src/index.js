@@ -3,10 +3,18 @@ const expressHandlebars = require('express-handlebars');
 const morgan = require('morgan');
 const { engine } = require('express-handlebars');
 const path = require('path');
+const Handlebars = require('handlebars');
 const route = require('./routes/routes');
+const db = require('./config/db/connect');
+
+db.connect();
 
 const app = express();
 const port = 3000;
+
+Handlebars.registerHelper('step', function (value, step) {
+    return value + step;
+});
 
 // lay file anh tu public/img
 app.use(express.static(path.join(__dirname, 'public')));
