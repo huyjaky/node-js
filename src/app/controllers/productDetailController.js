@@ -1,29 +1,35 @@
 const product = require('../models/productdetail');
 
 class producDetailController {
-    producDetailController(req, res, next) {
-        product
-            .find({})
-            .then((product) => {
-                product = product.map((products) => products.toObject());
-                console.log(product.length);
-
-                res.render('productDetail', { product });
-            })
-            .catch(next);
-    }
-
     async product(req, res, next) {
         const [products, product_ac] = await Promise.all([
             product.find({}),
-            product.findOne({slug: req.params.slug})
-        ])
-        
-        const data = {
-            products: products.map((product) => product.toObject()),
-            product_ac: product_ac.toObject()
+            product.findOne({ slug: req.params.slug }),
+        ]);
+
+        const product_temp = products.map((product) => product.toObject());
+        const groupProducts = [];
+        var temp = [];
+        for (let i = 0; i < product_temp.length; i++) {
+            temp.push(product_temp[i]);
+            if (temp.length === 4) {
+                groupProducts.push(temp);
+                temp = [];
+            }
         }
-        res.render('productDetail', {data})
+
+        if (temp.length > 0) {
+            groupProducts.push(temp);
+        }
+
+        // console.log(temp);
+        // res.json(groupProducts)
+
+        const data = {
+            products: groupProducts,
+            product_ac: product_ac.toObject(),
+        };
+        res.render('productDetail', { data });
     }
 }
 

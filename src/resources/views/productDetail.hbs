@@ -8,7 +8,9 @@
                     alt='...'
                 /></div>
             <div class='col-md-6'>
-                <h1 class='display-5 fw-bolder text-uppercase'>{{data.product_ac.name}}</h1>
+                <h1
+                    class='display-5 fw-bolder text-uppercase'
+                >{{data.product_ac.name}}</h1>
                 <div class='fs-5 mb-5'>
                     <span>${{data.product_ac.price}}</span>
                 </div>
@@ -43,29 +45,49 @@
         <div class='swiper'>
 
             <div class='swiper-wrapper'>
+                {{! slide1 }}
                 {{#each data.products}}
-                    {{! slide1 }}
-                    <div class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center h-100 swiper-slide mx-auto' >
-                        <div class='col mb-5'>
-                            <div class='card h-100'>
-                                <!-- Product image-->
-                                <img class='card-img-top' src='{{this.img}}' alt='...'/>
-                                <!-- Product details-->
-                                <div class='card-body p-4'>
-                                    <div class='text-center '>
-                                        <!-- Product name-->
-                                        <h5 class='fw-bolder'>{{this.name}}</h5>
-                                        <!-- Product price-->
-                                        <span class='text-muted text-decoration-line-through' >$20.00</span> ${{this.price}}
-                                        $40.00 - $80.00
+                    <div
+                        class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center h-100 swiper-slide mx-auto'
+                    >
+
+                        {{#each this}}
+                            <div class='col mb-5'>
+                                <div class='card h-100'>
+                                    <!-- Product image-->
+                                    <img
+                                        class='card-img-top'
+                                        src='{{this.img}}'
+                                        alt='...'
+                                    />
+                                    <!-- Product details-->
+                                    <div class='card-body p-4'>
+                                        <div class='text-center'>
+                                            <!-- Product name-->
+                                            <h5
+                                                class='fw-bolder'
+                                            >{{this.name}}</h5>
+                                            <!-- Product price-->
+                                            <span
+                                                class='text-muted text-decoration-line-through'
+                                            >$20.00</span>
+                                            ${{this.price}}
+                                            $40.00 - $80.00
+                                        </div>
+                                    </div>
+                                    <!-- Product actions-->
+                                    <div
+                                        class='card-footer p-4 pt-0 border-top-0 bg-transparent'
+                                    >
+                                        <div class='text-center'><a
+                                                class='btn btn-outline-dark mt-auto'
+                                                href='#'
+                                            >View options</a></div>
                                     </div>
                                 </div>
-                                <!-- Product actions-->
-                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' >
-                                    <div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#' >View options</a></div>
-                                </div>
                             </div>
-                        </div>
+                        {{/each}}
+
                     </div>
                 {{/each}}
                 {{! ket thuc slide1 }}
@@ -77,26 +99,10 @@
     </div>
 </section>
 <script type='module'>
-    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
-    const swiper = new Swiper('.swiper', { // Optional parameters direction:    
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-    });
+    import Swiper from
+    'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+    const swiper = new Swiper('.swiper', { // Optional parameters direction: //
+    direction: 'horizontal', loop: false, // If we need
+    pagination: { el: '.swiper-pagination',
+    },scrollbar: { el: '.swiper-scrollbar', }, });
 </script>
