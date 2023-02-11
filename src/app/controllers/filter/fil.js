@@ -1,7 +1,5 @@
-
-class filter
-{
-    filter (products) {
+class filter {
+    filter(products) {
         const product_temp = products.map((product) => product.toObject());
         var groupProducts = [];
         var temp = [];

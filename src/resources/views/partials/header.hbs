@@ -15,15 +15,58 @@
         ><span class='navbar-toggler-icon'></span></button>
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul class='navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4'>
-                <li class='nav-item'><a
-                        class='nav-link active'
-                        aria-current='page'
-                        href='#!'
-                    >Home</a></li>
-                <li class='nav-item'><a
-                        class='nav-link'
-                        href='#!'
-                    >About</a></li>
+
+                <li class='nav-item dropdown'>
+                    <a
+                        class='nav-link dropdown-toggle'
+                        id='navbarDropdown'
+                        href='#'
+                        role='button'
+                        data-bs-toggle='dropdown'
+                        aria-expanded='false'
+                    >Keyboard</a>
+                    <ul class='dropdown-menu' style="" aria-labelledby='navbarDropdown'>
+                        <li><a class='dropdown-item' href='#!'>All Products</a></li>
+                        <li><hr class='dropdown-divider' /></li>
+                        <li><a class='dropdown-item' href='#!'>Mr suit</a></li>
+                        <li><a class='dropdown-item' href='#!'>Cyber Board</a></li>
+                        <li><a class='dropdown-item' href='#!'>FL Esport</a></li>
+                    </ul>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a
+                        class='nav-link dropdown-toggle'
+                        id='navbarDropdown'
+                        href='#'
+                        role='button'
+                        data-bs-toggle='dropdown'
+                        aria-expanded='false'
+                    >Keycap</a>
+                    <ul class='dropdown-menu' style="" aria-labelledby='navbarDropdown'>
+                        <li><a class='dropdown-item' href='#!'>All Products</a></li>
+                        <li><hr class='dropdown-divider' /></li>
+                        <li><a class='dropdown-item' href='#!'>XMI</a></li>
+                        <li><a class='dropdown-item' href='#!'>XDA</a></li>
+                        <li><a class='dropdown-item' href='#!'>SA SP Maxkey</a></li>
+                    </ul>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a
+                        class='nav-link dropdown-toggle'
+                        id='navbarDropdown'
+                        href='#'
+                        role='button'
+                        data-bs-toggle='dropdown'
+                        aria-expanded='false'
+                    >Headphone</a>
+                    <ul class='dropdown-menu' style="" aria-labelledby='navbarDropdown'>
+                        <li><a class='dropdown-item' href='#!'>All Products</a></li>
+                        <li><hr class='dropdown-divider' /></li>
+                        <li><a class='dropdown-item' href='#!'>HyperX</a></li>
+                        <li><a class='dropdown-item' href='#!' >Sony</a></li>
+                        <li><a class='dropdown-item' href='#!'>Sound</a></li>
+                    </ul>
+                </li>
                 <li class='nav-item dropdown'>
                     <a
                         class='nav-link dropdown-toggle'
@@ -33,13 +76,21 @@
                         data-bs-toggle='dropdown'
                         aria-expanded='false'
                     >Shop</a>
-                    <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
+                    <ul class='dropdown-menu' style="" aria-labelledby='navbarDropdown'>
                         <li><a class='dropdown-item' href='#!'>All Products</a></li>
                         <li><hr class='dropdown-divider' /></li>
-                        <li><a class='dropdown-item' href='#!'>Popular Items</a></li>
-                        <li><a class='dropdown-item' href='#!'>New Arrivals</a></li>
+                        <li><a class='dropdown-item' href='#!'>Keyboard</a></li>
+                        <li><a
+                                class='dropdown-item'
+                                href='#!'
+                            >Headphone</a></li>
+                        <li><a class='dropdown-item' href='#!'>Keycap</a></li>
                     </ul>
                 </li>
+                <li class='nav-item'><a
+                        class='nav-link'
+                        href='#!'
+                >About</a></li>
             </ul>
             <form class='d-flex'>
                 <button
@@ -53,7 +104,18 @@
                         class='badge bg-dark text-white ms-1 rounded-pill'
                     >0</span>
                 </button>
+
             </form>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" style="border: none; background-color: transparent; color: black; font-size: larger;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{data.user.userName}}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
         </div>
     </div>
 </nav>

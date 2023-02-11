@@ -11,3 +11,12 @@ nav {
 
 .contain {
   z-index: 0; }
+
+.dropdown-menu {
+  list-style: none; }
+
+.dropdown:hover .dropdown-menu {
+  display: block; }
+
+.dropdown .dropdown-toggle:active {
+  pointer-events: none; }
