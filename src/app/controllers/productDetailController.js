@@ -31,6 +31,13 @@ class producDetailController {
         };
         res.render('productDetail', { data });
     }
+
+    async update_cart (req, res, next) {
+        // const [cart] = await Promise.all([
+        //     product.updateOne({kk})
+        // ])
+        
+    }
 }
 
 module.exports = new producDetailController();

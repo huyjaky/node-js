@@ -16,11 +16,14 @@ class homepageController {
         const products_hp_temp = fil.filter(products_hp);
         const products_kb_temp = fil.filter(products_kb);
         const user_temp = user_dt.toObject();
+        const cart = user_dt.cart;
+
 
         const data = {
             products_hp: products_hp_temp,
             products_kb: products_kb_temp,
             user: user_temp,
+            cart: cart.length
         };
 
         res.render('homepage', {data})
