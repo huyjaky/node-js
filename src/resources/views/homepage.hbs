@@ -5,13 +5,7 @@
         <form class='row g-3'>
             <div class='col-auto'>
                 <label for='inputEmail' class='visually-hidden'>Email</label>
-                <input
-                    type='email'
-                    name='email'
-                    class='form-control'
-                    id='inputEmail'
-                    placeholder='Email Address'
-                />
+                <input type='email' name='email' class='form-control' id='inputEmail' placeholder='Email Address' />
             </div>
             <div class='col-auto'>
                 <button type='submit' class='btn btn-primary mb-3'>GET 10% OFF</button>
@@ -23,45 +17,35 @@
 <section class='py-5'>
     {{!-- keyboard & keycap --}}
     <div class='container px-4 px-lg-5 mt-5'>
+        <div style="margin-bottom: 40px; font-size: 40px; font-weight: 600;">Keyboard & Keycap</div>
         <div class='swiper'>
             <div class='swiper-wrapper'>
                 {{#each data.products_kb}}
-                    <div
-                        class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center swiper-slide mx-auto contain'
-                    >
-                        {{#each this}}
-                            <div class='col mb-5'>
-                                <div class='card h-100'>
-                                    <!-- Product image-->
-                                    <img
-                                        class='card-img-top'
-                                        src='{{this.img}}'
-                                        alt='...'
-                                    />
-                                    <!-- Product details-->
-                                    <div class='card-body p-4'>
-                                        <div class='text-center'>
-                                            <!-- Product name-->
-                                            <h5
-                                                class='fw-bolder'
-                                            >{{this.name}}</h5>
-                                            <!-- Product price-->
-                                            ${{this.price}}
-                                        </div>
-                                    </div>
-                                    <!-- Product actions-->
-                                    <div
-                                        class='card-footer p-4 pt-0 border-top-0 bg-transparent'
-                                    >
-                                        <div class='text-center'><a
-                                                class='btn btn-outline-dark mt-auto'
-                                                href='homepage/{{this.slug}}'
-                                            >View options</a></div>
-                                    </div>
+                <div
+                    class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center swiper-slide mx-auto contain'>
+                    {{#each this}}
+                    <div class='col mb-5'>
+                        <div class='card h-100'>
+                            <!-- Product image-->
+                            <img class='card-img-top' src='{{this.img}}' alt='...' />
+                            <!-- Product details-->
+                            <div class='card-body p-4'>
+                                <div class='text-center'>
+                                    <!-- Product name-->
+                                    <h5 class='fw-bolder'>{{this.name}}</h5>
+                                    <!-- Product price-->
+                                    ${{this.price}}
                                 </div>
                             </div>
-                        {{/each}}
+                            <!-- Product actions-->
+                            <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+                                <div class='text-center'><a class='btn btn-outline-dark mt-auto'
+                                        href='homepage/{{this.slug}}'>View options</a></div>
+                            </div>
+                        </div>
                     </div>
+                    {{/each}}
+                </div>
                 {{/each}}
             </div>
             <div class='swiper-button-prev'></div>
@@ -70,46 +54,36 @@
     </div>
 
     {{!-- headphone --}}
-<div class='container px-4 px-lg-5 mt-5'>
+    <div class='container px-4 px-lg-5 mt-5'>
+        <div style="margin-bottom: 40px; font-size: 40px; font-weight: 600;">Headphone</div>
         <div class='swiper'>
             <div class='swiper-wrapper'>
                 {{#each data.products_hp}}
-                    <div
-                        class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center swiper-slide mx-auto contain'
-                    >
-                        {{#each this}}
-                            <div class='col mb-5'>
-                                <div class='card h-100'>
-                                    <!-- Product image-->
-                                    <img
-                                        class='card-img-top'
-                                        src='{{this.img}}'
-                                        alt='...'
-                                    />
-                                    <!-- Product details-->
-                                    <div class='card-body p-4'>
-                                        <div class='text-center'>
-                                            <!-- Product name-->
-                                            <h5
-                                                class='fw-bolder'
-                                            >{{this.name}}</h5>
-                                            <!-- Product price-->
-                                            ${{this.price}}
-                                        </div>
-                                    </div>
-                                    <!-- Product actions-->
-                                    <div
-                                        class='card-footer p-4 pt-0 border-top-0 bg-transparent'
-                                    >
-                                        <div class='text-center'><a
-                                                class='btn btn-outline-dark mt-auto'
-                                                href='homepage/{{this.slug}}'
-                                            >View options</a></div>
-                                    </div>
+                <div
+                    class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center swiper-slide mx-auto contain'>
+                    {{#each this}}
+                    <div class='col mb-5'>
+                        <div class='card h-100'>
+                            <!-- Product image-->
+                            <img class='card-img-top' src='{{this.img}}' alt='...' />
+                            <!-- Product details-->
+                            <div class='card-body p-4'>
+                                <div class='text-center'>
+                                    <!-- Product name-->
+                                    <h5 class='fw-bolder'>{{this.name}}</h5>
+                                    <!-- Product price-->
+                                    ${{this.price}}
                                 </div>
                             </div>
-                        {{/each}}
+                            <!-- Product actions-->
+                            <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+                                <div class='text-center'><a class='btn btn-outline-dark mt-auto'
+                                        href='homepage/{{this.slug}}'>View options</a></div>
+                            </div>
+                        </div>
                     </div>
+                    {{/each}}
+                </div>
                 {{/each}}
             </div>
             <div class='swiper-button-prev'></div>
@@ -120,16 +94,11 @@
     {{!-- gioi thieu so qua ve mot vai san pham --}}
 
     <div class='container text-center px-4 px-lg-5 mt-5 pb-5'>
-        <div
-            class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'
-        >
+        <div class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'>
             <div class='card post h-100 border-0' style='width: 30rem;'>
                 <a href=''>
-                    <img
-                        src='https://massdrop-s3.imgix.net/ma02-lohp/audio-full.jpg?auto=format&fm=jpg&fit=crop&w=582&h=389&dpr=1&chromasub=444&q=70'
-                        class='card-img-top'
-                        alt='...'
-                    />
+                    <img src='https://massdrop-s3.imgix.net/ma02-lohp/audio-full.jpg?auto=format&fm=jpg&fit=crop&w=582&h=389&dpr=1&chromasub=444&q=70'
+                        class='card-img-top' alt='...' />
                 </a>
                 <div class='card-body'>
                     <h5 class='card-title'>Card title</h5>
@@ -139,11 +108,8 @@
             </div>
             <div class='card post h-100 border-0' style='width: 30rem;'>
                 <a href=''>
-                    <img
-                        src='https://massdrop-s3.imgix.net/ma02-lohp/mechkeys-full.jpg?auto=format&fm=jpg&fit=crop&w=582&h=389&dpr=2&chromasub=444&q=35'
-                        class='card-img-top'
-                        alt='...'
-                    />
+                    <img src='https://massdrop-s3.imgix.net/ma02-lohp/mechkeys-full.jpg?auto=format&fm=jpg&fit=crop&w=582&h=389&dpr=2&chromasub=444&q=35'
+                        class='card-img-top' alt='...' />
                 </a>
                 <div class='card-body'>
                     <h5 class='card-title'>Card title</h5>
@@ -156,61 +122,34 @@
 
     {{!-- ko bt command j --}}
     <div class='container text-center px-4 px-lg-5 mt-5'>
-        <div
-            class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'
-        >
+        <div class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'>
             <div class='card mb-3' style='width: 100%; padding: 0'>
                 <div class='row g-0'>
                     <div class='col-md-8'>
-                        <img
-                            src='https://massdrop-s3.imgix.net/ma02-lohp/ctrl-full2.jpg?auto=format&fm=jpg&fit=crop&w=1068&h=547&dpr=1&chromasub=444&q=70'
-                            class='img-fluid rounded-start'
-                            alt='...'
-                        />
+                        <img src='https://massdrop-s3.imgix.net/product-images/drop-the-lord-of-rings-mt3-dwarvish-keycap-set/FP/C7FKjnPwSvSZ9Zx0VWex_dwarvish_keycap_set.png?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=1&chromasub=444&q=70'
+                            class='img-fluid rounded-start' alt='...' />
                     </div>
                     <div class='col-md-4'>
 
                         <div class='col h-100'>
-                            <div
-                                class='card h-100 bg-black'
-                                style='--bs-bg-opacity: 0.9;'
-                            >
-                                <!-- Product image-->
-                                <img
-                                    class='card-img-top'
-                                    src='{{this.img}}'
-                                    alt='...'
-                                />
+                            <div class='card h-100 bg-black' style='--bs-bg-opacity: 0.9;'>
                                 <!-- Product details-->
-                                <div class='card-body p-4'>
-                                    <div class='text-center'>
+                                <div class='card-body p-4' style="display: flex;">
+                                    <div class='text-center' style="margin: auto;">
                                         <!-- Product name-->
-                                        <h5
-                                            class='fw-bolder text-light'
-                                        >{{this.name}}</h5>
+                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">THE LORD OF THE RINGS MT3 DWARVISH KEYCAP SET</h5>
                                         <!-- Product reviews-->
-                                        <div
-                                            class='d-flex justify-content-center small text-warning mb-2'
-                                        >
-                                            <div
-                                                class='bi-star-fill text-light'
-                                            >{{this.descript}}</div>
+                                        <div class='d-flex justify-content-center small text-warning mb-2'>
+                                            <div class='bi-star-fill text-light'>{{this.descript}}</div>
                                         </div>
                                         <!-- Product price-->
-                                        <span
-                                            class='text-muted text-light'
-                                        >$20.00</span>
+                                        <span class='text-muted text-light'>$99.00</span>
                                     </div>
                                 </div>
                                 <!-- Product actions-->
-                                <div
-                                    class='card-footer p-4 pt-0 border-top-0 bg-transparent'
-                                >
+                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' style="margin-bottom: 100px;">
                                     <div class='text-center'>
-                                        <a
-                                            class='btn btn-outline-light mt-auto text-light'
-                                            href='#'
-                                        >Add to cart</a>
+                                        <a class='btn btn-outline-light mt-auto text-light' href='homepage/the-lord-of-the-ring'>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -222,66 +161,39 @@
     </div>
 
     <div class='container text-center px-4 px-lg-5 mt-5'>
-        <div
-            class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'
-        >
+        <div class='row container mx-auto gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'>
             <div class='card mb-3' style='width: 100%; padding: 0'>
                 <div class='row g-0'>
 
                     <div class='col-md-4'>
 
                         <div class='col h-100'>
-                            <div
-                                class='card h-100 bg-black'
-                                style='--bs-bg-opacity: 0.9;'
-                            >
-                                <!-- Product image-->
-                                <img
-                                    class='card-img-top'
-                                    src='{{this.img}}'
-                                    alt='...'
-                                />
+                            <div class='card h-100 bg-black' style='--bs-bg-opacity: 0.9;'>
                                 <!-- Product details-->
-                                <div class='card-body p-4'>
-                                    <div class='text-center'>
+                                <div class='card-body p-4' style="display: flex;">
+                                    <div class='text-center' style="margin: auto;">
                                         <!-- Product name-->
-                                        <h5
-                                            class='fw-bolder text-light'
-                                        >{{this.name}}</h5>
+                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">PIIFOX BINARY ASA PROFILE KEYCAP SET</h5>
                                         <!-- Product reviews-->
-                                        <div
-                                            class='d-flex justify-content-center small text-warning mb-2'
-                                        >
-                                            <div
-                                                class='bi-star-fill text-light'
-                                            >{{this.descript}}</div>
+                                        <div class='d-flex justify-content-center small text-warning mb-2'>
+                                            <div class='bi-star-fill text-light'>{{this.descript}}</div>
                                         </div>
                                         <!-- Product price-->
-                                        <span
-                                            class='text-muted text-light'
-                                        >$20.00</span>
+                                        <span class='text-muted text-light'>$99.00</span>
                                     </div>
                                 </div>
                                 <!-- Product actions-->
-                                <div
-                                    class='card-footer p-4 pt-0 border-top-0 bg-transparent'
-                                >
+                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' style="margin-bottom: 100px;">
                                     <div class='text-center'>
-                                        <a
-                                            class='btn btn-outline-light mt-auto text-light'
-                                            href='#'
-                                        >Add to cart</a>
+                                        <a class='btn btn-outline-light mt-auto text-light' href='homepage/piifox-binary'>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class='col-md-8'>
-                        <img
-                            src='https://massdrop-s3.imgix.net/ma02-lohp/ctrl-full2.jpg?auto=format&fm=jpg&fit=crop&w=1068&h=547&dpr=1&chromasub=444&q=70'
-                            class='img-fluid rounded-start'
-                            alt='...'
-                        />
+                        <img src='https://massdrop-s3.imgix.net/product-images/piifox-binary-asa-profile-keycap-set/FP/hM87x0BRnihR8F5bMMJA_pc.png?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=1&chromasub=444&q=70'
+                            class='img-fluid rounded-start' alt='...' />
                     </div>
                 </div>
             </div>
@@ -292,10 +204,10 @@
 </section>
 <script type='module'>
     import Swiper from
-    'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+        'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
     const swiper = new Swiper('.swiper', { // Optional parameters direction: //
-    direction: 'horizontal',
-    loop: false,
+        direction: 'horizontal',
+        loop: false,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -310,13 +222,7 @@
         <form class='row g-3 justify-content-center'>
             <div class='col-auto'>
                 <label for='inputEmail' class='visually-hidden'>Email</label>
-                <input
-                    type='email'
-                    name='email'
-                    class='form-control'
-                    id='inputEmail'
-                    placeholder='Email Address'
-                />
+                <input type='email' name='email' class='form-control' id='inputEmail' placeholder='Email Address' />
             </div>
             <div class='col-auto'>
                 <button type='submit' class='btn btn-primary mb-3'>GET 10% OFF</button>

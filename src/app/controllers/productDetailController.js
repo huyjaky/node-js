@@ -1,11 +1,15 @@
 const product = require('../models/productdetail');
 
 class producDetailController {
+
     async product(req, res, next) {
-        const [products, product_ac] = await Promise.all([
-            product.find({}),
-            product.findOne({ slug: req.params.slug }),
-        ]);
+        // const [products, product_ac] = await Promise.then([
+        //     product.find({}),
+        //     product.findOne({ slug: req.params.slug }),
+        // ]);
+        const product_ac = await product.findOne({ slug: req.params.slug });
+        const products = await product.find({ descript: product_ac.toObject().descript });
+
 
         const product_temp = products.map((product) => product.toObject());
         const groupProducts = [];
@@ -36,7 +40,7 @@ class producDetailController {
         // const [cart] = await Promise.all([
         //     product.updateOne({kk})
         // ])
-        
+
     }
 }
 
