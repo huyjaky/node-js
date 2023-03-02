@@ -91,6 +91,44 @@
         </div>
     </div>
 
+    {{!-- monitor --}}
+    <div class='container px-4 px-lg-5 mt-5'>
+        <div style="margin-bottom: 40px; font-size: 40px; font-weight: 600;">Monitor</div>
+        <div class='swiper'>
+            <div class='swiper-wrapper'>
+                {{#each data.products_mn}}
+                <div
+                    class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center swiper-slide mx-auto contain'>
+                    {{#each this}}
+                    <div class='col mb-5'>
+                        <div class='card h-100'>
+                            <!-- Product image-->
+                            <img class='card-img-top' src='{{this.img}}' alt='...' />
+                            <!-- Product details-->
+                            <div class='card-body p-4'>
+                                <div class='text-center'>
+                                    <!-- Product name-->
+                                    <h5 class='fw-bolder'>{{this.name}}</h5>
+                                    <!-- Product price-->
+                                    ${{this.price}}
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+                                <div class='text-center'><a class='btn btn-outline-dark mt-auto'
+                                        href='homepage/{{this.slug}}'>View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+            <div class='swiper-button-prev'></div>
+            <div class='swiper-button-next'></div>
+        </div>
+    </div>
+
     {{!-- gioi thieu so qua ve mot vai san pham --}}
 
     <div class='container text-center px-4 px-lg-5 mt-5 pb-5'>
@@ -137,7 +175,8 @@
                                 <div class='card-body p-4' style="display: flex;">
                                     <div class='text-center' style="margin: auto;">
                                         <!-- Product name-->
-                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">THE LORD OF THE RINGS MT3 DWARVISH KEYCAP SET</h5>
+                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">THE LORD OF THE RINGS
+                                            MT3 DWARVISH KEYCAP SET</h5>
                                         <!-- Product reviews-->
                                         <div class='d-flex justify-content-center small text-warning mb-2'>
                                             <div class='bi-star-fill text-light'>{{this.descript}}</div>
@@ -147,9 +186,11 @@
                                     </div>
                                 </div>
                                 <!-- Product actions-->
-                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' style="margin-bottom: 100px;">
+                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'
+                                    style="margin-bottom: 100px;">
                                     <div class='text-center'>
-                                        <a class='btn btn-outline-light mt-auto text-light' href='homepage/the-lord-of-the-ring'>Add to cart</a>
+                                        <a class='btn btn-outline-light mt-auto text-light'
+                                            href='homepage/the-lord-of-the-ring'>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +214,8 @@
                                 <div class='card-body p-4' style="display: flex;">
                                     <div class='text-center' style="margin: auto;">
                                         <!-- Product name-->
-                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">PIIFOX BINARY ASA PROFILE KEYCAP SET</h5>
+                                        <h5 class='fw-bolder text-light' style="font-size: 40px;">PIIFOX BINARY ASA
+                                            PROFILE KEYCAP SET</h5>
                                         <!-- Product reviews-->
                                         <div class='d-flex justify-content-center small text-warning mb-2'>
                                             <div class='bi-star-fill text-light'>{{this.descript}}</div>
@@ -183,9 +225,11 @@
                                     </div>
                                 </div>
                                 <!-- Product actions-->
-                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent' style="margin-bottom: 100px;">
+                                <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'
+                                    style="margin-bottom: 100px;">
                                     <div class='text-center'>
-                                        <a class='btn btn-outline-light mt-auto text-light' href='homepage/piifox-binary'>Add to cart</a>
+                                        <a class='btn btn-outline-light mt-auto text-light'
+                                            href='homepage/piifox-binary'>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
